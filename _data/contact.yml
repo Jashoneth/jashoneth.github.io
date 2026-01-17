@@ -3,8 +3,11 @@
 - type: github
   icon: "fab fa-github"
 
-- type: twitter
-  icon: "fa-brands fa-x-twitter"
+- type: linkedin
+  icon: "fab fa-linkedin"
+
+- type: kaggle
+  icon: "fab fa-kaggle"
 
 - type: email
   icon: "fas fa-envelope"

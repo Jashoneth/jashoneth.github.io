@@ -55,12 +55,19 @@
       {%- assign url = null -%}
 
       {% case entry.type %}
-        {% when 'github', 'twitter' %}
+        {% when 'github', 'kaggle' %}
           {%- unless site[entry.type].username -%}
             {%- continue -%}
           {%- endunless -%}
           {%- capture url -%}
             https://{{ entry.type }}.com/{{ site[entry.type].username }}
+          {%- endcapture -%}
+        {% when 'linkedin' %}
+          {%- unless site.linkedin.username -%}
+            {%- continue -%}
+          {%- endunless -%}
+          {%- capture url -%}
+            https://linkedin.com/in/{{ site.linkedin.username }}
           {%- endcapture -%}
         {% when 'email' %}
           {%- unless site.social.email -%}
